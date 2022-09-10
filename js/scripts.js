@@ -5,7 +5,7 @@
 
 //Business Logic:
 
-const numStringArray = [0, 'beep', 'boop', "won't you be my neightbor?", 4, 5];
+const numStringArray = [0, 'beep', 'boop', "won't you be my neighbor?", 4, 5];
 numStringArray.forEach(function(numberBeep) {
   if (numStringArray.toString(1) === 'beep') {
     return 'beep';
@@ -20,6 +20,10 @@ numStringArray.forEach(function(numberBeep) {
 
 //User Interface Logic:
 
+function hideResults() {
+  document.querySelector('div#result').setAttribute('class', 'hidden');
+}
+
 function resetFormInput() {
   document.getElementById('numberInput').value = null;
 }
@@ -28,6 +32,7 @@ function resetFormInput() {
 window.addEventListener('load', function() {
   const form = document.querySelector("form");
   const resetBtn = document.querySelector("button#reset");
+  const result = document.querySelector('div#result');
 
   resetBtn.addEventListener('click', function() {
     hideResults();
@@ -37,6 +42,11 @@ window.addEventListener('load', function() {
 
   form.addEventListener('submit', function(e) {
     const numberInput = document.getElementById('numberInput').value;
+
+    document.querySelector('div#result').removeAttribute('class');
+    document.getElementById('numberInput').innerText = numberInput.toString();
+
+    result.removeAttribute('class');
 
     e.preventDefault();
   })
