@@ -25,6 +25,10 @@ Test: "It should return a 'beep' when it starts with number 1."
 Code: const numStringArray = [0, 'beep', 2, 3, 4, 5];
 Expected output: 'beep'
 
+Test: "It should return a 'boop' when user inputs a number 2."
+Code: const numStringArray = [0, 'beep', 'boop', 3, 4, 5];
+Expected output: 'boop'
+
 
 ## Setup/Installation Requirements
 

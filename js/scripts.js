@@ -5,9 +5,9 @@
 
 //Business Logic:
 
-const numStringArray = [0, 'beep', 2, 3, 4, 5];
+const numStringArray = [0, 'beep', 'boop', 3, 4, 5];
 numStringArray.forEach(function(numberBeep) {
-  if (1 === 'beep');
+  if (numStringArray.toString(1) === 'beep');
   return 'beep';
 });
 
