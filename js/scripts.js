@@ -11,7 +11,7 @@ numStringArray.forEach(function(numberBeep) {
     return 'beep';
   } else if (numStringArray.toString(2) === 'boop') {
     return 'boop';
-  } else if (numStringArray.toString(3) === "won't you be my neightbor?") {
+  } else if (numStringArray.toString(3) === "won't you be my neighbor?") {
     return "won't you be my neightbor?";
   }
 });
@@ -19,3 +19,19 @@ numStringArray.forEach(function(numberBeep) {
 
 
 //User Interface Logic:
+
+function resetFormInput() {
+  document.getElementById("numberInput").value = null;
+}
+
+
+window.addEventListener("load", function() {
+  const form = document.querySelector("form");
+  const resetBtn = document.querySelector("button#reset");
+})
+
+  form.addEventListener("submit", function(e) {
+    const numberInput = document.getElementById("numberInput").value;
+
+    e.preventDefault();
+  })
