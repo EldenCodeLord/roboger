@@ -29,6 +29,9 @@ Test: "It should return a 'boop' when user inputs a number 2."
 Code: const numStringArray = [0, 'beep', 'boop', 3, 4, 5];
 Expected output: 'boop'
 
+Test: "It should return 'Won't you be my neighbor?' if user inputs a number 3."
+Code: const numStringArray = [0, 'beep', 'boop', 'won't you be my neightbor?', 4, 5];
+Expected output: 'won't you be my neightbor?'
 
 ## Setup/Installation Requirements
 
