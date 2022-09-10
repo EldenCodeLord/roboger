@@ -21,17 +21,23 @@ numStringArray.forEach(function(numberBeep) {
 //User Interface Logic:
 
 function resetFormInput() {
-  document.getElementById("numberInput").value = null;
+  document.getElementById('numberInput').value = null;
 }
 
 
-window.addEventListener("load", function() {
+window.addEventListener('load', function() {
   const form = document.querySelector("form");
   const resetBtn = document.querySelector("button#reset");
-})
 
-  form.addEventListener("submit", function(e) {
-    const numberInput = document.getElementById("numberInput").value;
+  resetBtn.addEventListener('click', function() {
+    hideResults();
+    resetFormInput();
+  })
+
+
+  form.addEventListener('submit', function(e) {
+    const numberInput = document.getElementById('numberInput').value;
 
     e.preventDefault();
   })
+})
